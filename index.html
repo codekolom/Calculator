@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+  <div class="calculator">
+    <input type="text" id="display" class="display" readonly placeholder="0">
+    <div class="buttons">
+      <button class="op" onclick="memoryRecall()">MRC</button>
+      <button class="op" onclick="memoryMinus()">M-</button>
+      <button class="op" onclick="memoryPlus()">M+</button>
+      <button class="op" onclick="sqrt()">√</button>
+      <button class="op" onclick="percent()">%</button>
+
+      <button class="func" onclick="backspace()">←</button>
+      <button class="num" onclick="press('7')">7</button>
+      <button class="num" onclick="press('8')">8</button>
+      <button class="num" onclick="press('9')">9</button>
+      <button class="op" onclick="press('/')">/</button>
+
+      <button class="clear" onclick="clearEntry()">CE</button>
+      <button class="num" onclick="press('4')">4</button>
+      <button class="num" onclick="press('5')">5</button>
+      <button class="num" onclick="press('6')">6</button>
+      <button class="op" onclick="press('*')">*</button>
+
+      <button class="clear" onclick="allClear()">AC</button>
+      <button class="num" onclick="press('1')">1</button>
+      <button class="num" onclick="press('2')">2</button>
+      <button class="num" onclick="press('3')">3</button>
+      <button class="op" onclick="press('-')">-</button>
+
+      <button class="num" onclick="press('0')">0</button>
+      <button class="num" onclick="press('00')">00</button>
+      <button class="num" onclick="press('.')">.</button>
+      <button class="equal" onclick="calculate()">=</button>
+      <button class="op" onclick="press('+')">+</button>
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

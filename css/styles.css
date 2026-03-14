@@ -1,0 +1,112 @@
+/* Puronopromon (Reset) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f0f2f5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Calculator Container */
+.calculator {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+/* Display Screen */
+.display {
+  width: 100%;
+  height: 70px;
+  font-size: 32px;
+  border: none;
+  background: #f8f9fa;
+  color: #333;
+  text-align: right;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  outline: none;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Buttons Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* General Button Style */
+button {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Number Buttons (White/Light) */
+.num {
+  background: #ffffff;
+  color: #333;
+}
+
+/* Operator Buttons (Light Purple/Blue) */
+.op {
+  background: #f1f3f9;
+  color: #5d5fef;
+}
+
+/* Function Buttons (Orange Tint) */
+.func {
+  background: #fff4e6;
+  color: #ff922b;
+}
+
+/* Clear Buttons (Red/Coral) */
+.clear {
+  background: #ff6b6b;
+  color: white;
+}
+
+/* Equal Button (Primary Blue) */
+.equal {
+  background: #5d5fef;
+  color: white;
+}
+
+/* Hover & Active Effects */
+button:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: scale(0.92);
+}
+
+/* Responsive adjustment for 00 button if needed */
+button:nth-child(n) {
+  font-family: inherit;
+}
