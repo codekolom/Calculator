@@ -7,9 +7,9 @@ function press(value) {
 
 function calculate() {
   try {
-    // eval() diye string theke math kora hoy
-
-    display.value = eval(display.value);
+    if (display.value) {
+      display.value = eval(display.value);
+    }
   } catch (err) {
     display.value = 'Error';
   }
@@ -43,7 +43,7 @@ function percent() {
 function memoryPlus() {
   if (display.value) {
     memory += Number(eval(display.value));
-    display.value = ''; // Memory-te pathiye screen khali kora
+    display.value = '';
   }
 }
 
@@ -57,3 +57,25 @@ function memoryMinus() {
 function memoryRecall() {
   display.value = memory;
 }
+
+// Keyboard Support (Ekhane vul chhilo, ekhon thik kora hoyeche)
+document.addEventListener('keydown', function (event) {
+  const key = event.key;
+
+  // Shonkhya ba Operator hole
+  if (!isNaN(key) || ['+', '-', '*', '/', '.'].includes(key)) {
+    press(key);
+  }
+  // Enter chaple
+  else if (key === 'Enter') {
+    calculate();
+  }
+  // Backspace chaple (chhoto hater 'b')
+  else if (key === 'Backspace') {
+    backspace();
+  }
+  // Escape chaple
+  else if (key === 'Escape') {
+    allClear();
+  }
+});
