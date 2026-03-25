@@ -1,4 +1,4 @@
-/* Puronopromon (Reset) */
+/* ১. রিসেট এবং বেসিক সেটআপ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +14,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Calculator Container */
+/* ২. ক্যালকুলেটর কন্টেইনার */
 .calculator {
   background: #ffffff;
   padding: 20px;
@@ -23,7 +23,7 @@ body {
   width: 320px;
 }
 
-/* Display Screen */
+/* ৩. ডিসপ্লে স্ক্রিন */
 .display {
   width: 100%;
   height: 70px;
@@ -39,17 +39,15 @@ body {
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Buttons Grid */
+/* ৪. বাটন গ্রিড লেআউট */
 .buttons {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
-  padding: 20px;
-  align-items: center;
-  justify-content: center;
+  justify-items: center;
 }
 
-/* General Button Style */
+/* ৫. জেনারেল বাটন স্টাইল */
 button {
   height: 50px;
   width: 50px;
@@ -58,55 +56,56 @@ button {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+  user-select: none; /* যাতে বারবার ক্লিকে টেক্সট সিলেক্ট না হয়ে যায় */
 }
 
-/* Number Buttons (White/Light) */
+/* ৬. ক্যাটাগরি ভিত্তিক কালার */
 .num {
   background: #ffffff;
   color: #333;
 }
-
-/* Operator Buttons (Light Purple/Blue) */
 .op {
   background: #f1f3f9;
   color: #5d5fef;
 }
-
-/* Function Buttons (Orange Tint) */
 .func {
   background: #fff4e6;
   color: #ff922b;
 }
-
-/* Clear Buttons (Red/Coral) */
 .clear {
   background: #ff6b6b;
   color: white;
 }
-
-/* Equal Button (Primary Blue) */
 .equal {
   background: #5d5fef;
   color: white;
 }
 
-/* Hover & Active Effects */
+/* ৭. কিবোর্ড এবং মাউস ক্লিকের ইফেক্ট (আপনার চাওয়া ইয়েলো কালার) */
+/* .active-key ক্লাসটি কিবোর্ডের জন্য এবং button:active মাউস ক্লিকের জন্য */
+.active-key,
+button:active {
+  background-color: #ffcc00 !important; /* ইয়েলো/গোল্ডেন কালার */
+  color: #000 !important;
+  transform: scale(0.9) !important;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.6) !important;
+  transition: 0.05s;
+}
+
+/* ৮. সাধারণ মাউস হোভার (মাউস উপরে রাখলে যা হবে) */
 button:hover {
   transform: translateY(-2px);
   filter: brightness(0.95);
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
 }
 
-button:active {
-  transform: scale(0.92);
-}
-
-/* Responsive adjustment for 00 button if needed */
+/* ৯. ফন্ট অ্যাডজাস্টমেন্ট */
 button:nth-child(n) {
   font-family: inherit;
 }
