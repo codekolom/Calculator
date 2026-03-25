@@ -87,25 +87,21 @@ button {
   color: white;
 }
 
-/* ৭. কিবোর্ড এবং মাউস ক্লিকের ইফেক্ট (আপনার চাওয়া ইয়েলো কালার) */
-/* .active-key ক্লাসটি কিবোর্ডের জন্য এবং button:active মাউস ক্লিকের জন্য */
 .active-key,
 button:active {
-  background-color: #ffcc00 !important; /* ইয়েলো/গোল্ডেন কালার */
+  background-color: #7c3aed !important;
   color: #000 !important;
   transform: scale(0.9) !important;
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.6) !important;
+  box-shadow: 0 0 15px rgba(52, 47, 187, 0.8) !important;
   transition: 0.05s;
 }
 
-/* ৮. সাধারণ মাউস হোভার (মাউস উপরে রাখলে যা হবে) */
 button:hover {
   transform: translateY(-2px);
   filter: brightness(0.95);
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* ৯. ফন্ট অ্যাডজাস্টমেন্ট */
 button:nth-child(n) {
   font-family: inherit;
 }

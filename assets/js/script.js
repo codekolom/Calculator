@@ -68,7 +68,7 @@ document.addEventListener('keydown', function (event) {
     press(key);
     buttonText = key;
   } else if (key === 'Enter') {
-    event.preventDefault(); // ব্রাউজার ডিফল্ট কাজ বন্ধ রাখতে
+    event.preventDefault();
     calculate();
     buttonText = '=';
   } else if (key === 'Backspace') {
@@ -79,7 +79,6 @@ document.addEventListener('keydown', function (event) {
     buttonText = 'AC';
   }
 
-  // বাটন খুঁজে বের করা এবং ইফেক্ট দেওয়া
   if (buttonText) {
     const buttons = document.querySelectorAll('button');
     buttons.forEach(btn => {
@@ -90,18 +89,14 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
-// বাটন এনিমেশন এবং সাউন্ড ফাংশন
 function activateButton(btn) {
-  // সাউন্ড প্লে করা
   if (clickSound) {
-    clickSound.currentTime = 0; // আগের সাউন্ড শেষ না হলেও আবার বাজবে
+    clickSound.currentTime = 0;
     clickSound.play().catch(e => console.log('Sound play error:', e));
   }
 
-  // কালার পরিবর্তন (CSS ক্লাস যোগ)
   btn.classList.add('active-key');
 
-  // ১০০ মিলি-সেকেন্ড পর সরিয়ে ফেলা
   setTimeout(() => {
     btn.classList.remove('active-key');
   }, 100);
